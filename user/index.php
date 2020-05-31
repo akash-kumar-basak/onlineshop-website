@@ -79,7 +79,7 @@ color:#333;}
 
 <td valign="top" class="td1" align="center" width="20%" height="60%">
 <h2>Catagory</h2>
-<a class="link">Electronis</a> 
+<a class="link" href="electronics.php">Electronis</a> 
 <a class="link">Clothe</a>
 <a class="link">Jewelery</a>
 <a class="link">Gadget</a> 
@@ -94,15 +94,19 @@ color:#333;}
 <?php
 if(isset($page_content) == FALSE)
 {
-	include"random_product.php";
+	include "random_product.php";
 }
 else if($page_content == "details")
 {
-	include"product_details_content.php";
+	include "product_details_content.php";
+}
+else if($page_content == "electronics")
+{
+	include "electronics_product.php";
 }
 else
 {
-	include"help_content.php";
+	include "help_content.php";
 }
 ?>
 
