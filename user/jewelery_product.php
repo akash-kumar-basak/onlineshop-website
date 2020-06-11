@@ -1,7 +1,7 @@
 <!--CODED BY AKASH KUMAR BASAK-->
 <?php
 $server_connect = mysqli_connect("localhost", "root", "", "onlineshop");
-$all_data_sql_query = "SELECT * FROM products WHERE  catagory = 'electronis' ";
+$all_data_sql_query = "SELECT * FROM products WHERE  catagory = 'jewelery' ";
 $query_result = mysqli_query($server_connect, $all_data_sql_query);
 $row = mysqli_fetch_assoc($query_result);
 while($row = mysqli_fetch_assoc($query_result)){
@@ -11,12 +11,6 @@ while($row = mysqli_fetch_assoc($query_result)){
 <html>
 <head>
 <title>onlineshop</title>
-<style>
-.product {height:10%;
-width:30%;
-}
-</style>
-
 </head>
 
 <body>

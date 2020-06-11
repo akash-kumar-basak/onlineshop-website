@@ -56,15 +56,19 @@ color:#333;}
 </head>
 
 <body>
-<table class="header"><tr><td>
-<img src="../asset/onlineshoplogo.png" width="50%" height="25%">
+<table class="header"><tr><td><img src="../asset/onlineshoplogo.png" height="25%" width="75%">
 <p class="dialogue">Guarrentty for Secured and Trusted Shopping</p>
 </td></tr></table>
 <div class="navigation">
 <table align="center" width="70.35%" height="5px">
 <tr>
 <td class="td1" align="center" width="20%"><a class="link" href="index.php">Home</a></td>
-<td class="td2" align="center" width="60%"><input type="search"> <input type="button" value="search products"></td>
+<td class="td2" align="center" width="60%">
+<form action="search.php" method="post">
+<input type="search" name="itemsearch">
+<input type="submit" value="search products">
+</form>
+</td>
 <td class="td3" align="center" width="20%"><a class="link" href="help.php">Support center</a></td>
 </tr>
 </table>
@@ -80,10 +84,10 @@ color:#333;}
 <td valign="top" class="td1" align="center" width="20%" height="60%">
 <h2>Catagory</h2>
 <a class="link" href="electronics.php">Electronis</a> 
-<a class="link">Clothe</a>
-<a class="link">Jewelery</a>
-<a class="link">Gadget</a> 
-<a class="link">Watch</a>
+<a class="link" href="Clothe.php">Clothe</a>
+<a class="link" href="Jewelery.php">Jewelery</a>
+<a class="link" href="Gadget.php">Gadget</a> 
+<a class="link" href="Watch.php">Watch</a>
 </td>
 
 <!--Main Contens-->
@@ -96,6 +100,10 @@ if(isset($page_content) == FALSE)
 {
 	include "random_product.php";
 }
+else if($page_content == "search")
+{
+	include "search_product.php";
+}
 else if($page_content == "details")
 {
 	include "product_details_content.php";
@@ -103,6 +111,22 @@ else if($page_content == "details")
 else if($page_content == "electronics")
 {
 	include "electronics_product.php";
+}
+else if($page_content == "clothe")
+{
+	include "clothe_product.php";
+}
+else if($page_content == "jewelery")
+{
+	include "jewelery_product.php";
+}
+else if($page_content == "gadget")
+{
+	include "gadget_product.php";
+}
+else if($page_content == "watch")
+{
+	include "watch_product.php";
 }
 else
 {
