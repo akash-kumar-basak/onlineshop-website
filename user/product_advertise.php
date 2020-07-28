@@ -3,8 +3,8 @@
 //require("server_database_connect.php");
 $server_connect = mysqli_connect("localhost", "root", "", "onlineshop");
 //$database_connect = mysqli_select_db("onlineshop");
-$name = $_GET['name'];
-$all_data_sql_query = "SELECT * FROM products WHERE name='$name' ";
+$id = $_GET['id'];
+$all_data_sql_query = "SELECT * FROM products WHERE id='$id' ";
 $query_result = mysqli_query($server_connect, $all_data_sql_query);
 $row = mysqli_fetch_assoc($query_result);
 ?>

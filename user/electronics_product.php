@@ -21,7 +21,7 @@ width:30%;
 
 <body>
 <div class="product">
-<a class="productlink" href="product_details.php?name=<?php echo $row['name']; ?>"><img class="photo" src=" <?php echo $row['image'] ?>"> <br>
+<a class="productlink" href="product_details.php?id=<?php echo $row['id']; ?>"><img class="photo" src=" <?php echo $row['image'] ?>"> <br>
 <?php echo $row['name'] ?><br>
 <?php echo $row['price'] ?></h4>
 </a>
